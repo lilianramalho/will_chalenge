@@ -51,6 +51,7 @@ class HomeScreen extends StatelessWidget {
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
                 ),
                 ElevatedButton(
+                  key: Key("button"),
                     style: ElevatedButton.styleFrom(
                       primary: CustomColors.salmon,
                       shape: RoundedRectangleBorder(

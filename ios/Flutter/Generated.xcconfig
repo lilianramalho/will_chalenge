@@ -1,14 +1,15 @@
 // This is a generated file; do not edit or check into version control.
-FLUTTER_ROOT=/Users/thinkseg/Documents/development/flutter
-FLUTTER_APPLICATION_PATH=/Users/thinkseg/Documents/projetos/pessoais/will_challenge
+FLUTTER_ROOT=/Users/liliancarneiroramalho/Documents/flutter
+FLUTTER_APPLICATION_PATH=/Users/liliancarneiroramalho/Documents/projetos/will_chalenge
 COCOAPODS_PARALLEL_CODE_SIGN=true
-FLUTTER_TARGET=/Users/thinkseg/Documents/projetos/pessoais/will_challenge/lib/main.dart
+FLUTTER_TARGET=/Users/liliancarneiroramalho/Documents/projetos/will_chalenge/lib/main.dart
 FLUTTER_BUILD_DIR=build
 FLUTTER_BUILD_NAME=1.0.0
 FLUTTER_BUILD_NUMBER=1
 EXCLUDED_ARCHS[sdk=iphonesimulator*]=i386
+EXCLUDED_ARCHS[sdk=iphoneos*]=armv7
 DART_DEFINES=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ==
 DART_OBFUSCATION=false
 TRACK_WIDGET_CREATION=true
 TREE_SHAKE_ICONS=false
-PACKAGE_CONFIG=/Users/thinkseg/Documents/projetos/pessoais/will_challenge/.dart_tool/package_config.json
+PACKAGE_CONFIG=/Users/liliancarneiroramalho/Documents/projetos/will_chalenge/.dart_tool/package_config.json

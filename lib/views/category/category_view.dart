@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:will_challenge/controller/category_controller.dart';
 import 'package:will_challenge/utils/custom_colors.dart';
 import 'package:will_challenge/views/category/category_card.dart';
+import 'package:loading_indicator/loading_indicator.dart';
 
 class CategoryView extends StatelessWidget {
   const CategoryView({Key? key}) : super(key: key);
@@ -18,23 +19,32 @@ class CategoryView extends StatelessWidget {
         backgroundColor: CustomColors.white,
         iconTheme: IconThemeData(color: Colors.black),
       ),
-      body: Container(
-        child: ListView.builder(
-            padding: const EdgeInsets.all(8),
-            itemCount: categoryController.listCategory?.length,
-            itemBuilder: (BuildContext context, int index) {
-              return CategoryCard(
-                urlImage: categoryController.listCategory
-                    ?.elementAt(index)
-                    .strCategoryThumb,
-                title: categoryController.listCategory
-                    ?.elementAt(index)
-                    .strCategory,
-                description: categoryController.listCategory
-                    ?.elementAt(index)
-                    .strCategoryDescription,
-              );
-            }),
+      body: Obx( (() => 
+      !categoryController.isLoarding.value ?
+         Container(
+          child: 
+           ListView.builder(
+            key: Key("List-category"),
+              padding: const EdgeInsets.all(8),
+              itemCount: categoryController.listCategory?.length,
+              itemBuilder: (BuildContext context, int index) {
+                return CategoryCard(
+                  urlImage: categoryController.listCategory
+                      ?.elementAt(index)
+                      .strCategoryThumb,
+                  title: categoryController.listCategory
+                      ?.elementAt(index)
+                      .strCategory,
+                  description: categoryController.listCategory
+                      ?.elementAt(index)
+                      .strCategoryDescription,
+                );
+              }),
+        )
+        : Center(
+          child: const LoadingIndicator(
+            indicatorType: Indicator.ballPulse,)
+        ))
       ),
     );
   }

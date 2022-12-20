@@ -67,7 +67,7 @@ class CategoryCard extends StatelessWidget {
                           ))
                         },
                     icon: Icon(
-                      Icons.info,
+                      Icons.alarm,
                       size: 30.px,
                     )),
                 Container(
